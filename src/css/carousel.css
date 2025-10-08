@@ -1,0 +1,70 @@
+
+:root {
+    /* Colores */
+    --primary-color: #2b2b2b;
+    --secondary-color: #7a8087;
+    --black-color: #000000;
+    --white-color: #fff;
+    --gray-dark-color: #3b3b3b;
+
+    /* Tamaño de fuente */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1.2rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* Grosor fuente */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /*  Radio bordes */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Ancho maximo del sitio */
+    --site-max-width: auto;
+}
+
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;  /* recorto todas las img */
+}
+
+.carousel-item h3 {
+    color: var(--white-color);
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-bold);
+    text-shadow: #000000 1px 1px 2px;
+}
+
+.carousel-item p {
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-medium);
+    text-shadow: #000000 1px 1px 2px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: auto;     
+  top: 50%;      
+  transform: translateY(-50%);
+  opacity: 0.3; 
+}
+
+.carousel-control-prev {
+  left: 40px;    
+}
+
+.carousel-control-next {
+  right: 40px;   
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1; 
+}

@@ -1,0 +1,139 @@
+/* Fuente */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* Colores */
+  --primary-color: #2b2b2b;
+  --white-color: #ffffff;
+  --black-color: #000000;
+
+  /* Tamaños de fuente */
+  --font-size-s: 0.9rem;
+  --font-size-n: 1.2rem;
+  --font-size-m: 1.12rem;
+  --font-size-xxl: 4.3rem;
+
+  /* Grosor fuente */
+  --font-weight-bold: 700;
+
+  /* Bordes */
+  --border-radius-s: 8px;
+}
+
+/* -------- HERO SECTION -------- */
+.section-ph {
+  position: relative;
+  min-height: 100vh;
+  padding: 180px 20px 100px;
+  text-align: center;
+  background: url("../img/phishing.jpg") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.section-ph::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+  color: var(--white-color);
+}
+
+.section-ph h1 {
+  font-size: clamp(2.5rem, 5vw, var(--font-size-xxl));
+  font-weight: var(--font-weight-bold);
+  margin-top: 100px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.section-ph p {
+  margin: 0 auto 30px;
+  font-size: var(--font-size-n);
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  color: var(--white-color);
+}
+
+.section-ph .btn {
+  display: inline-block;
+  background-color: #a31a2a;
+  color: var(--white-color);
+  font-weight: var(--font-weight-bold);
+  padding: 12px 24px;
+  border-radius: var(--border-radius-s);
+  text-decoration: none;
+  transition: background 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.section-ph .btn:hover {
+  background-color: #5c0c16;
+}
+
+.stats-ph {
+  display: flex;
+  justify-content: center;
+  gap: clamp(40px, 8vw, 150px);
+  background-color: rgb(30, 30, 30);
+  padding: 60px 20px;
+}
+
+.stat-ph {
+  text-align: center;
+}
+
+.stat-ph h2 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 10px;
+  color: white;
+}
+
+.stat-ph p {
+  font-size: var(--font-size-m);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .section-ph {
+    padding: 140px 20px 80px;
+  }
+
+  .section-ph h1 {
+    margin-top: 60px;
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .section-ph p {
+    font-size: 1rem;
+  }
+
+  .stats-ph {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+}
