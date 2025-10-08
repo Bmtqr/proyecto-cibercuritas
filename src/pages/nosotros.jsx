@@ -14,7 +14,6 @@ export default function Nosotros() {
   }, []);
   return (
     <main>
-
       <section className="foto-nos">
         <div className="foto-nos nos-overlay"></div>
         <h1 className="foto-nos-title">Sobre Nosotros</h1>

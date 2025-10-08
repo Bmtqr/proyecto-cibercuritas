@@ -8,8 +8,13 @@ import {
 } from "../utils/validacion.jsx";
 import "../css/cotizacion.css";
 import Footer from "../utils/footer.jsx";
+import Navbar from "../utils/navbar.jsx";
+import { useEffect } from "react";
 
 export default function Cotizacion() {
+  useEffect(() => {
+      document.title = "Cibercuritas - Contacto";
+    }, []);
   const [formData, setFormData] = useState({
     area: "",
     nombre: "",
@@ -70,6 +75,7 @@ export default function Cotizacion() {
 
   return (
     <>
+    <Navbar />
       <section className="titulo-cot">
         <h2>Formulario de Cotización</h2>
         <p className="kicker">Completa tus datos y te contactamos</p>

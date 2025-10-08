@@ -201,6 +201,10 @@
     margin-top: 20px;
 }
 
+#contacto-formulario .btn-enviar:hover {
+    background-color: rgb(72, 71, 71);
+}
+
 .mensaje-exito {
   display: block;
   margin-top: 20px;
@@ -247,10 +251,16 @@
       "lbl-coment" "comentarios"
       "submit";
   }
+
   #contacto-formulario .btn-enviar {
     justify-self: stretch;
     }
+
+  #contacto-formulario .btn-enviar:hover {
+    background-color: rgb(72, 71, 71);
+  }
 }
+
 
 #contacto-formulario select {
   width: 100%;

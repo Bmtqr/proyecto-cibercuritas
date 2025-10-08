@@ -9,7 +9,6 @@ import "../css/imgtexto1.css"
 import AOS from 'aos';
 import "aos/dist/aos.css";
 
-
 export default function Home() {
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
@@ -18,7 +17,7 @@ export default function Home() {
     document.title = "Cibercuritas - Inicio";
   }, []);
   return (
-    < >
+    <>
     <Carousel>
             <Carousel.Item>
                 <img
@@ -141,7 +140,7 @@ export default function Home() {
                 </a>
             </div>
         </section>
-    <Footer />
+    <Footer  />
     </>
     );
 }
