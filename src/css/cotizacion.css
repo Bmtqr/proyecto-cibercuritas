@@ -36,8 +36,6 @@
     --site-max-width: auto;
 }
 
-
-/* --- Formulario --- */
 .titulo-cot{
   margin-top: 130px;
   text-align: center;
@@ -58,7 +56,7 @@
 
 .contacto-section {
     padding: 10px 20px;
-    background: rgb(49, 49, 49);      
+    background-color: rgb(30, 30, 30);
     box-sizing: border-box;
     margin-top: 10px;
     color: white;
@@ -204,14 +202,31 @@
 }
 
 .mensaje-exito {
-  display: none;
-  margin-top: 15px;
-  padding: 12px;
-  border-radius: 8px;
-  background: var(--primary-color);
-  color: #ffffff;
+  display: block;
+  margin-top: 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  background-color: #28a745;
+  color: white;
   font-weight: 600;
   text-align: center;
+  animation: fadeInOut 4s ease-in-out forwards;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 
 /* --- Responsivo --- */
