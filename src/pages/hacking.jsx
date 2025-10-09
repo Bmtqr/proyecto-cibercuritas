@@ -17,6 +17,10 @@ export default function Hacking() {
     <section className="hero-hacking">
     <div className="hero-h-over"></div>
     <h1 class="hero-h-title">Hacking Ético</h1>
+        <section className="desliza">
+            <h5>Desliza</h5>
+            <i className="fas fa-chevron-down"></i>
+        </section>
     </section>
 
     <section className="titulo-info-h2">

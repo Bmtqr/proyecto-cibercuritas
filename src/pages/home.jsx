@@ -8,6 +8,7 @@ import "../css/carousel.css";
 import "../css/imgtexto1.css"
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import Navbar from "../utils/navbar.jsx";
 
 export default function Home() {
     useEffect(() => {
@@ -18,6 +19,7 @@ export default function Home() {
   }, []);
   return (
     <>
+    <Navbar />
     <Carousel>
             <Carousel.Item>
                 <img
@@ -28,30 +30,42 @@ export default function Home() {
                 <Carousel.Caption>
                 <h3>Seguridad 24/7</h3>
                 <p>Monitoreo continuo y respuesta a incidentes.</p>
+                <section className="desliza">
+                <h5>Desliza</h5>
+                <i className="fas fa-chevron-down"></i>
+                </section>
                 </Carousel.Caption>
             </Carousel.Item>
 
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                src="../img/carousel-2.png"
+                src="../img/carousel-2.jpg"
                 alt="Slide 2"
                 />
                 <Carousel.Caption>
                 <h3>Protección contra Phishing</h3>
                 <p>Identifica y bloquea intentos de suplantación.</p>
+                <section className="desliza">
+                <h5>Desliza</h5>
+                <i className="fas fa-chevron-down"></i>
+                </section>
                 </Carousel.Caption>
             </Carousel.Item>
 
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                src="../img/carousel-3.jpg"
+                src="../img/carousel-3.png"
                 alt="Slide 3"
                 />
                 <Carousel.Caption>
                 <h3>Concientización</h3>
                 <p>Capacitaciones para tu equipo.</p>
+                <section className="desliza">
+                <h5>Desliza</h5>
+                <i className="fas fa-chevron-down"></i>
+                </section>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

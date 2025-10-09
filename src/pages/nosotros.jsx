@@ -17,6 +17,10 @@ export default function Nosotros() {
       <section className="foto-nos">
         <div className="foto-nos nos-overlay"></div>
         <h1 className="foto-nos-title">Sobre Nosotros</h1>
+        <section className="desliza">
+          <h5>Desliza</h5>
+          <i className="fas fa-chevron-down"></i>
+        </section>
       </section>
 
 

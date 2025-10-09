@@ -24,6 +24,10 @@ export default function Phishing() {
             CONSULTA POR NUESTROS SERVICIOS
           </a>
         </div>
+        <section className="desliza">
+          <h5>Desliza</h5>
+          <i className="fas fa-chevron-down"></i>
+        </section>
       </section>
 
 

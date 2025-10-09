@@ -14,6 +14,6 @@ import Cotizacion from './pages/cotizacion.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Cotizacion />
+    <Home />
   </StrictMode>,
 )

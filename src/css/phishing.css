@@ -33,7 +33,7 @@
   min-height: 100vh;
   padding: 180px 20px 100px;
   text-align: center;
-  background: url("../img/phishing.jpg") no-repeat center center;
+  background: url("../img/phishing.png") no-repeat center center;
   background-size: cover;
   overflow: hidden;
 }
@@ -76,7 +76,7 @@
 
 .section-ph .btn {
   display: inline-block;
-  background-color: #a31a2a;
+  background-color: #464646;
   color: var(--white-color);
   font-weight: var(--font-weight-bold);
   padding: 12px 24px;
@@ -88,7 +88,49 @@
 }
 
 .section-ph .btn:hover {
-  background-color: #5c0c16;
+  background-color: #252525;
+}
+
+.desliza {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;     
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  font-weight: 600;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.desliza h5 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+.desliza .fa-chevron-down {
+  font-size: 22px;
+  line-height: 1;
+  display: inline-block;
+  margin-left: 4px;
+  animation: bounce 1.6s infinite;
+  opacity: 0.95;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0);   opacity: 0.9; }
+  40%  { transform: translateY(-10px); opacity: 1; }
+  70%  { transform: translateY(-4px);  opacity: 0.95; }
+  100% { transform: translateY(0);   opacity: 0.9; }
 }
 
 .stats-ph {
