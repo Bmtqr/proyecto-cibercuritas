@@ -25,7 +25,9 @@ export default function Login() {
 
     alert(`Correo: ${email}\nHash: ${hashedPass}`);
 
-    window.location.href = "https://www.duoc.cl";
+    if (ok) {
+      navigate('/')
+    }
   }
 
   return (

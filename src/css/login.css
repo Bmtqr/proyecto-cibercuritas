@@ -28,7 +28,7 @@
 }
 
 .cuadro {
-  width: 100%;
+  width: 120%;
   max-width: 860px;
   background: rgb(37, 37, 37);
   border: 1px solid var(--card-border);
@@ -237,4 +237,14 @@ input[type="password"] {
 
 .icon-ojo:hover {
   color: #9a9a9a;
+}
+
+/* login.css */
+.main-login {
+  padding-top: 100px; /* 👈 Ajusta según el alto del navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
 }

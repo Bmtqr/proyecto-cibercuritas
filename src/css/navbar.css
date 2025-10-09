@@ -85,7 +85,7 @@
 }
 
 .logo {
-  text-decoration: none !important;  /* sin subrayado */
+  text-decoration: none !important; 
 }
 
 .logo-texto {
@@ -97,9 +97,9 @@
   gap: 10px;
   margin-top: 10px;
   margin-right: 7px;
-  list-style: none;      /* elimina los puntos */
-  margin: 0;             /* quita espacio extra */
-  padding: 0;            /* quita relleno extra */
+  list-style: none; 
+  margin: 0;         
+  padding: 0;        
 }
 
 .navbar .menu .menu-item a {
@@ -150,7 +150,7 @@
     right: 12px;
     top: 100%;              
     transform: translateY(10px);
-    background: #2b2b2b;
+    background: #121212;
     border-radius: 12px;
     box-shadow: 0 12px 30px rgba(0,0,0,.25);
     flex-direction: column;
@@ -178,8 +178,9 @@
     font-size: 16px;         
     color: #fff;
   }
+
   .menu .nav-link:hover{
-    background:#3b3b3b;
+    background:#1e1e1e;
   }
 
   .nav-toggle:checked + .hamburger span:nth-child(1){ transform: translateY(9px) rotate(45deg); }
@@ -195,12 +196,13 @@
   left: 0;
   min-width: 260px;
   padding: 8px 0;
-  background: rgba(0,0,0,0.9);
+  background: #121212;
   backdrop-filter: blur(8px);
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   display: none;      
   z-index: 9999;
+  list-style: none;
 }
 
 .navbar .menu .submenu a {

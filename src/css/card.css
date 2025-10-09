@@ -78,7 +78,7 @@
 
 .back1 {
   background: rgb(55, 54, 54);
-  color: rgb(9, 9, 197);
+  color: rgb(97, 97, 180);
   transform: rotateY(180deg);
   display: flex;            
   flex-direction: column;  

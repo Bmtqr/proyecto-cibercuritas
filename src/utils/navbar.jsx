@@ -1,13 +1,15 @@
 import "../css/navbar.css";
+import { NavLink } from "react-router-dom";
+
 
 export default function Navbar() {
   return (
     <section className="section-navbar">
       <header className="hero-header">
         <nav className="navbar">
-          <a className="logo">
+          <NavLink to="/" className="logo">
             <h3 className="logo-texto">Cibercuritas</h3>
-          </a>
+          </NavLink>
 
           {/* Checkbox para el menú responsive */}
           <input type="checkbox" id="nav-toggle" className="nav-toggle" />
@@ -22,25 +24,25 @@ export default function Navbar() {
           {/* Menú principal */}
           <ul className="menu">
             <li className="menu-item">
-              <a href="/" className="nav-link">Inicio</a>
+              <NavLink to="/" className="nav-link">Inicio</NavLink>
             </li>
             <li className="menu-item">
-              <a href="/nosotros" className="nav-link">Nosotros</a>
+              <NavLink to="/nosotros" className="nav-link">Nosotros</NavLink>
             </li>
             <li className="menu-item has-submenu">
-              <a href="#" className="nav-link">Servicios</a>
+              <a className="nav-link">Servicios</a>
               <ul className="submenu">
-                <li><a href="/phishing" className="nav-link">Capacitación</a></li>
-                <li><a href="/hacking" className="nav-link">Hacking Ético</a></li>
+                <li><NavLink to="/phishing" className="nav-link">Capacitación</NavLink></li>
+                <li><NavLink to="/hacking" className="nav-link">Hacking</NavLink></li>
               </ul>
             </li>
             <li className="menu-item">
-              <a href="/contacto" className="nav-link">Contacto</a>
+              <NavLink to="/cotizacion" className="nav-link">Contacto</NavLink>
             </li>
             <li className="menu-item">
-              <a href="/login" className="nav-link">
+              <NavLink to="/login" className="nav-link">
                 <i className="fa-solid fa-user"></i>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
