@@ -77,8 +77,8 @@
 }
 
 .back1 {
-  background: white;
-  color: rgb(45, 45, 235);
+  background: rgb(55, 54, 54);
+  color: rgb(9, 9, 197);
   transform: rotateY(180deg);
   display: flex;            
   flex-direction: column;  
@@ -88,7 +88,7 @@
 }
 
 .back1 p {
-  color: var(--black-color);
+  color: white;
   text-align: center  ;
 }
 
@@ -127,7 +127,7 @@
 }
 
 .back2 {
-  background: white;
+  background: rgb(55, 54, 54);
   color: #087667;
   transform: rotateY(180deg);
   display: flex;            
@@ -146,7 +146,7 @@
 }
 
 .back2 p {
-  color: var(--black-color);
+  color: white;
   text-align: center;
 }
 
@@ -179,7 +179,7 @@
 }
 
 .back3 {
-  background: white;
+  background: rgb(55, 54, 54);
   color: #2C2C2C;
   transform: rotateY(180deg);
   display: flex;            
@@ -191,16 +191,18 @@
 
 .back3 h4 {
   text-align: center;
+  color: rgb(164, 164, 164)
 }
 
 .back3 p {
-  color: var(--black-color);
+  color: white;
   text-align: center;
 }
 
 .back3 ul {
   padding: 0;
   text-align: center;
+  color: rgb(164, 164, 164)
 }
 
 .info-card.is-open .front3 {
@@ -232,7 +234,7 @@
 }
 
 .back4 {
-  background: white;
+  background: rgb(55, 54, 54);
   color: #c3691f;
   transform: rotateY(180deg);
   display: flex;            
@@ -247,7 +249,7 @@
 }
 
 .back4 p {
-  color: var(--black-color);
+  color: white;
   text-align: center;
 }
 
