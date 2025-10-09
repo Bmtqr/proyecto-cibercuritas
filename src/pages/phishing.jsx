@@ -1,10 +1,14 @@
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
+import { NavLink } from "react-router-dom";
 import AOS from 'aos';
 import "../css/phishing.css";
 import Footer from '../utils/footer.jsx';
 
 export default function Phishing() {
+    useEffect(() => {
+    document.title = "Cibercuritas - Phishing";
+  }, []);
     useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -20,9 +24,9 @@ export default function Phishing() {
             abordan temas como phishing, ingeniería social y buenas prácticas
             corporativas para proteger la información.
           </p>
-          <a href="#" className="btn">
+          <NavLink to="/cotizacion" className="btn">
             CONSULTA POR NUESTROS SERVICIOS
-          </a>
+          </NavLink>
         </div>
         <section className="desliza">
           <h5>Desliza</h5>
