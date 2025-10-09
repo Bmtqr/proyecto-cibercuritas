@@ -23,7 +23,6 @@ export default function Nosotros() {
         </section>
       </section>
 
-
       <section className="vms">
         <div className="container">
           <h2 className="titulo-seccion" data-aos="fade-up" data-aos-delay="100">Nuestra Visión, Misión y Propósito</h2>
