@@ -47,6 +47,15 @@ export default function Cotizacion() {
     e.preventDefault();
     const nuevosErrores = {};
 
+    if (!formData.area) nuevosErrores.area = "Este campo es obligatorio";
+    if (!formData.nombre) nuevosErrores.nombre = "Este campo es obligatorio";
+    if (!formData.apellido) nuevosErrores.apellido = "Este campo es obligatorio";
+    if (!formData.email) nuevosErrores.email = "Este campo es obligatorio";
+    if (!formData.rut) nuevosErrores.rut = "Este campo es obligatorio";
+    if (!formData.cargo) nuevosErrores.cargo = "Este campo es obligatorio";
+    if (!formData.empresa) nuevosErrores.empresa = "Este campo es obligatorio";
+    if (!formData.telefono) nuevosErrores.telefono = "Este campo es obligatorio";
+    if (!formData.region) nuevosErrores.region = "Este campo es obligatorio";
 
     if (!validarEmail(formData.email)) nuevosErrores.email = "Correo inválido";
     if (!validarTelefono(formData.telefono)) nuevosErrores.telefono = "Debe tener 9 números";
@@ -92,11 +101,11 @@ export default function Cotizacion() {
             onChange={handleChange}
           >
             <option value="" disabled>Selecciona</option>
-            <option value="conec">Conectividad - 1.000.000</option>
-            <option value="ciber">Hacking Ético - 2.500.000</option>
-            <option value="phishing">Phishing - 500.000</option>
-            <option value="soluc">Soluciones TI - 1.500.000</option>
-            <option value="cloud">Cloud - 2.000.000</option>
+            <option value="conec">Conectividad - 1.000.000 CLP</option>
+            <option value="ciber">Hacking Ético - 2.500.000 CLP</option>
+            <option value="phishing">Phishing - 700.000 CLP</option>
+            <option value="soluc">Soluciones TI - 1.500.000 CLP</option>
+            <option value="cloud">Cloud - 2.000.000 CLP</option>
           </select>
 
           <label htmlFor="nombre">Nombre*</label>
@@ -195,6 +204,10 @@ export default function Cotizacion() {
           <button type="submit" className="btn-enviar">Enviar</button>
           {mensajeExito && <div className="mensaje-exito">{mensajeExito}</div>}
         </form>
+
+      </section>
+      <section className="precio-total">
+        <h3>Precio Total Estimado: </h3>
       </section>
     <Footer />
     </>

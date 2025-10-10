@@ -72,8 +72,8 @@
 }
 
 .front1 h3 {
-  position: relative;
   z-index: 1;
+  text-shadow: black 1px 1px 4px; 
 }
 
 .back1 {
@@ -128,6 +128,7 @@
 
 .front2 h3 {
     z-index: 1;
+    text-shadow: black 1px 1px 4px;
 }
 
 .back2 {
@@ -184,6 +185,7 @@
 
 .front3 h3 {
     z-index: 1;
+    text-shadow: black 1px 1px 4px;
 }
 
 .back3 {
@@ -243,6 +245,7 @@
 
 .front4 h3 {
     z-index: 1;
+    text-shadow: black 1px 1px 4px;
 }
 
 .back4 {

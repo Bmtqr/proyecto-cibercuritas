@@ -17,17 +17,14 @@ export default function Navbar() {
             <h3 className="logo-texto">Cibercuritas</h3>
           </NavLink>
 
-          {/* Checkbox para el menú responsive */}
           <input type="checkbox" id="nav-toggle" className="nav-toggle" />
 
-          {/* Icono hamburguesa */}
           <label htmlFor="nav-toggle" className="hamburger">
             <span></span>
             <span></span>
             <span></span>
           </label>
 
-          {/* Menú principal */}
           <ul className="menu">
             <li className="menu-item">
               <NavLink to="/" className="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>Inicio</NavLink>
