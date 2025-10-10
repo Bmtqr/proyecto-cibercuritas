@@ -26,7 +26,7 @@ export default function Hacking() {
     <section className="titulo-info-h2">
     <article className="texto-info">
         <div className="texto-info-cuerpo">
-        <h2 data-aos="fade-up" data-aos-delay="100">Descubrir las debilidades antes de que lo hagan los malos</h2>
+        <h2 data-aos="fade-up" data-aos-delay="100">Descubrir las debilidades antes de que los malos</h2>
         <p data-aos="fade-up" data-aos-delay="100">
             Identificamos y corregimos las vulnerabilidades antes de que puedan ser explotadas, garantizando que tu infraestructura esté siempre un paso por delante de los atacantes.
         </p>

@@ -10,6 +10,7 @@ import Phishing from "./pages/phishing.jsx";
 import Cotizacion from "./pages/cotizacion.jsx";
 import Login from "./pages/login.jsx";
 
+
 function App() {
   return (
     <>

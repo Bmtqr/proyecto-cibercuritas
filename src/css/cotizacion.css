@@ -233,35 +233,6 @@
   }
 }
 
-/* --- Responsivo --- */
-
-@media (max-width: 680px){
-  #contacto-formulario {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "lbl-area" "area"
-      "lbl-nombre" "nombre"
-      "lbl-apellido" "apellido"
-      "lbl-rut" "rut"
-      "lbl-cargo" "cargo"
-      "lbl-empresa" "empresa"
-      "lbl-email" "email"
-      "lbl-region" "region"
-      "lbl-telefono" "telefono"
-      "lbl-coment" "comentarios"
-      "submit";
-  }
-
-  #contacto-formulario .btn-enviar {
-    justify-self: stretch;
-    }
-
-  #contacto-formulario .btn-enviar:hover {
-    background-color: rgb(72, 71, 71);
-  }
-}
-
-
 #contacto-formulario select {
   width: 100%;
   padding: 6px 18px;            
@@ -323,4 +294,26 @@
 .input-error{
   border: 2px solid #d32f2f !important;
   background-color: #ffeaea;
+}
+
+@media (max-width: 680px) {
+  #contacto-formulario {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "lbl-area" "area"
+      "lbl-nombre" "nombre"
+      "lbl-apellido" "apellido"
+      "lbl-rut" "rut"
+      "lbl-email" "email"
+      "lbl-empresa" "empresa"
+      "lbl-cargo" "cargo"
+      "lbl-telefono" "telefono"
+      "lbl-region" "region"
+      "lbl-coment" "comentarios"
+      "submit";
+  }
+
+  #contacto-formulario .btn-enviar {
+    justify-self: stretch;
+  }
 }
