@@ -92,11 +92,11 @@ export default function Cotizacion() {
             onChange={handleChange}
           >
             <option value="" disabled>Selecciona</option>
-            <option value="conec">Conectividad</option>
-            <option value="ciber">Hacking Ético</option>
-            <option value="phishing">Phishing</option>
-            <option value="soluc">Soluciones TI</option>
-            <option value="cloud">Cloud</option>
+            <option value="conec">Conectividad - 1.000.000</option>
+            <option value="ciber">Hacking Ético - 2.500.000</option>
+            <option value="phishing">Phishing - 500.000</option>
+            <option value="soluc">Soluciones TI - 1.500.000</option>
+            <option value="cloud">Cloud - 2.000.000</option>
           </select>
 
           <label htmlFor="nombre">Nombre*</label>
