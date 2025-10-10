@@ -33,7 +33,7 @@
   min-height: 100vh;
   padding: 180px 20px 100px;
   text-align: center;
-  background: url("../img/phishing.png") no-repeat center center;
+  background: url("/img/phishing.png") no-repeat center center;
   background-size: cover;
   overflow: hidden;
 }
@@ -163,6 +163,8 @@
 @media (max-width: 768px) {
   .section-ph {
     padding: 140px 20px 80px;
+    height: 100vh;
+
   }
 
   .section-ph h1 {

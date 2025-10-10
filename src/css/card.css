@@ -63,7 +63,7 @@
   content: "";
   position: absolute;
   inset: 0;                     
-  background: url('../img/redes.png') no-repeat;
+  background: url('/img/redes.png') no-repeat;
   opacity: .4;                 
   z-index: 0;                    
   border-radius: inherit; 
@@ -118,7 +118,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background:url('../img/world.png') no-repeat;
+  background:url('/img/world.png') no-repeat;
   opacity: 0.3;                 
   z-index: 0;                 
   background-size: 170%;     
@@ -170,7 +170,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background:url('../img/oseguridad.png') no-repeat;
+  background:url('/img/oseguridad.png') no-repeat;
   opacity: 0.3;             
   z-index: 0;                      
   background-size: 170%;     
@@ -225,7 +225,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background:url('../img/consul.png') no-repeat;
+  background:url('/img/consul.png') no-repeat;
   opacity: 0.3;                
   z-index: 0;                      
   background-size: 190%;    

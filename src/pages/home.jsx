@@ -24,7 +24,7 @@ export default function Home() {
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                src="../img/carousel-1.jpg"
+                src={`${import.meta.env.BASE_URL}/img/carousel-1.jpg`}
                 alt="Slide 1"
                 />
                 <Carousel.Caption>
@@ -40,7 +40,7 @@ export default function Home() {
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                src="../img/carousel-2.jpg"
+                src={`${import.meta.env.BASE_URL}/img/carousel-2.jpg`}
                 alt="Slide 2"
                 />
                 <Carousel.Caption>
@@ -56,7 +56,7 @@ export default function Home() {
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                src="../img/carousel-3.png"
+                src={`${import.meta.env.BASE_URL}/img/carousel-3.png`}
                 alt="Slide 3"
                 />
                 <Carousel.Caption>
@@ -132,7 +132,7 @@ export default function Home() {
         </section>
         <section className="imagen-texto1" data-aos="fade-up" data-aos-delay="100">
             <img
-                src="../img/texto1.jpg" 
+                src={`${import.meta.env.BASE_URL}/img/texto1.jpg`}
                 className="itexto1"
                 alt="Imagen texto 1"
                 data-aos="fade-up" data-aos-delay="100"
