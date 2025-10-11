@@ -9,6 +9,8 @@ import "../css/imgtexto1.css"
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import Navbar from "../utils/navbar.jsx";
+import Noticias from "./noticias.jsx";
+import "../css/home.css"
 
 export default function Home() {
     useEffect(() => {
@@ -154,6 +156,7 @@ export default function Home() {
                 </a>
             </div>
         </section>
+    <Noticias />
     <Footer />
     </>
     );
