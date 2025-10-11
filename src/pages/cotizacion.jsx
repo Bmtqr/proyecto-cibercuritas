@@ -87,6 +87,7 @@ export default function Cotizacion() {
     <Navbar />
       <section className="titulo-cot">
         <h2>Formulario de Cotización</h2>
+        <section className="barra-dec"></section>
         <p className="kicker">Completa tus datos y te contactamos</p>
       </section>
 

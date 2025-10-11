@@ -9,11 +9,38 @@ export default function Navbar() {
     const navToggle = document.getElementById("nav-toggle");
     if (navToggle) navToggle.checked = false;
   }, [location]);
+
+     useEffect(() => {
+      const handleClickOutside = (e) => {
+      const navToggle = document.getElementById("nav-toggle");
+      const menu = document.querySelector(".menu");
+      const hamburger = document.querySelector(".hamburger");
+
+      if (!navToggle) return;
+
+      if (
+        navToggle.checked &&
+        menu &&
+        hamburger &&
+        !menu.contains(e.target) &&
+        !hamburger.contains(e.target)
+      ) {
+        navToggle.checked = false;
+      }
+    };
+
+      document.addEventListener("mousedown", handleClickOutside);
+
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, []);
+  
   return (
     <section className="section-navbar">
       <header className="hero-header">
         <nav className="navbar">
-          <NavLink to="/" className="logo">
+          <NavLink to="/home" className="logo">
             <h3 className="logo-texto">Cibercuritas</h3>
           </NavLink>
 
