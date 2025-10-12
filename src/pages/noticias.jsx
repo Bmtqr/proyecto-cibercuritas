@@ -46,8 +46,8 @@ export default function Noticias() {
       });
   }, []);
 
-  if (cargando) return <p>Cargando noticias...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (cargando) return <p className="cargando-not">Cargando noticias...</p>;
+  if (error) return <p className="error-not">Error: {error}</p>;
 
     const slidesToShow = isMobile ? 1 : 4;
 

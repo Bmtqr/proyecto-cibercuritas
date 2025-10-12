@@ -147,6 +147,13 @@
   transition: color 0.3s ease;
 }
 
+.cargando-not, .error-not {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 50px;
+}
+
 .noticia-card a:hover {
   color: #3d3d3d;
 }
