@@ -296,6 +296,11 @@
   background-color: #ffeaea;
 }
 
+.precio-total{
+  text-align: center;
+  color: white;
+}
+
 @media (max-width: 680px) {
   #contacto-formulario {
     grid-template-columns: 1fr;
