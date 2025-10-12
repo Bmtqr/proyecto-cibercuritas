@@ -10,31 +10,27 @@ export default function Navbar() {
     if (navToggle) navToggle.checked = false;
   }, [location]);
 
-     useEffect(() => {
-      const handleClickOutside = (e) => {
-      const navToggle = document.getElementById("nav-toggle");
-      const menu = document.querySelector(".menu");
-      const hamburger = document.querySelector(".hamburger");
+  useEffect(() => {
+  const handleClickOutside = (e) => {
+    const navToggle = document.getElementById("nav-toggle");
+    const menu = document.querySelector(".menu");
+    const hamburger = document.querySelector(".hamburger");
 
-      if (!navToggle) return;
+    if (
+      navToggle?.checked &&
+      !menu?.contains(e.target) &&
+      !hamburger?.contains(e.target)
+    ) {
+      navToggle.checked = false;
+    }
+  };
 
-      if (
-        navToggle.checked &&
-        menu &&
-        hamburger &&
-        !menu.contains(e.target) &&
-        !hamburger.contains(e.target)
-      ) {
-        navToggle.checked = false;
-      }
-    };
+  document.addEventListener("mousedown", handleClickOutside);
 
-      document.addEventListener("mousedown", handleClickOutside);
-
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, []);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [location]);
   
   return (
     <section className="section-navbar">
@@ -45,7 +41,6 @@ export default function Navbar() {
           </NavLink>
 
           <input type="checkbox" id="nav-toggle" className="nav-toggle" />
-
           <label htmlFor="nav-toggle" className="hamburger">
             <span></span>
             <span></span>
