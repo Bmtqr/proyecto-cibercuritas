@@ -119,6 +119,50 @@
   opacity: 1; 
 }
 
+@media (max-width: 1200px) {
+  .carousel-item h3 {
+    font-size: 48px;
+    top: -250px;
+  }
+
+  .carousel-item p {
+    font-size: 24px;
+    top: -240px;
+  }
+
+  .carousel-item img {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .carousel-item h3 {
+    font-size: 36px;
+    top: -200px;
+  }
+
+  .carousel-item p {
+    font-size: 20px;
+    top: -190px;
+  }
+
+  .carousel-item img {
+    height: 80vh;
+  }
+
+  .carousel-control-prev {
+    left: 20px;
+  }
+
+  .carousel-control-next {
+    right: 20px;
+  }
+
+  .desliza h5 {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 768px) {
   .carousel-item h3 {
       font-size: 30px;
@@ -136,5 +180,61 @@
 
   .carousel-control-next {
     right: 10px;   
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-item h3 {
+    font-size: 26px;
+    top: -120px;
+    text-align: center;
+  }
+
+  .carousel-item p {
+    font-size: 16px;
+    top: -110px;
+    text-align: center;
+  }
+
+  .carousel-item img {
+    height: 100vh;
+  }
+
+  .desliza {
+    bottom: 18px;
+  }
+
+  .desliza h5 {
+    font-size: 12px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none; /* flechas ocultas en móvil */
+  }
+
+  .carousel-indicators {
+    display: flex !important;
+    justify-content: center;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.6;
+    margin: 0 5px;
+    transition: opacity 0.3s;
+  }
+
+  .carousel-indicators .active {
+    opacity: 1;
+    background-color: #303030;
   }
 }

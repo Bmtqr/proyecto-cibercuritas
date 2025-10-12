@@ -9,6 +9,23 @@ export default function Phishing() {
     useEffect(() => {
     document.title = "Cibercuritas - Phishing";
   }, []);
+
+  useEffect(() => {
+    const handleDeslizaClick = () => {
+    const nextSection = document.querySelector(".stats-ph");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const deslizas = document.querySelectorAll(".desliza");
+  deslizas.forEach((el) => el.addEventListener("click", handleDeslizaClick));
+
+  return () => {
+    deslizas.forEach((el) => el.removeEventListener("click", handleDeslizaClick));
+    };
+  }, []);
+
     useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);

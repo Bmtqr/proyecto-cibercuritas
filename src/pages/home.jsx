@@ -17,9 +17,9 @@ export default function Home() {
         AOS.init({ duration: 1000, once: true });
       }, []);
 
-      useEffect(() => {
+    useEffect(() => {
     const handleDeslizaClick = () => {
-    const nextSection = document.querySelector(".carousel");
+    const nextSection = document.querySelector(".titulo1");
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }

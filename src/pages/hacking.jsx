@@ -9,6 +9,27 @@ export default function Hacking() {
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
       }, []);
+
+    useEffect(() => {
+    const handleDeslizaClick = () => {
+    const nextSection = document.querySelector(".titulo-info-h2");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const deslizas = document.querySelectorAll(".desliza");
+  deslizas.forEach((el) => el.addEventListener("click", handleDeslizaClick));
+
+  return () => {
+    deslizas.forEach((el) => el.removeEventListener("click", handleDeslizaClick));
+    };
+  }, []);
+
+    useEffect(() => {
+    document.title = "Cibercuritas - Inicio";
+  }, []);
+
     useEffect(() => {
     document.title = "Cibercuritas - Hacking Etico";
   }, []);

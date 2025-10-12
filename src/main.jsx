@@ -11,7 +11,7 @@ import Scroll from './utils/scroll.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <BrowserRouter basename="/proyecto-cibercuritas">
-  <Scroll />
+    <Scroll />
     <App />
   </BrowserRouter>
   </StrictMode>,

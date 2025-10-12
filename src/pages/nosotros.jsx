@@ -9,6 +9,23 @@ export default function Nosotros() {
   useEffect(() => {
       AOS.init({ duration: 1000, once: true });
     }, []);
+
+  useEffect(() => {
+    const handleDeslizaClick = () => {
+    const nextSection = document.querySelector(".vms");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const deslizas = document.querySelectorAll(".desliza");
+  deslizas.forEach((el) => el.addEventListener("click", handleDeslizaClick));
+
+  return () => {
+    deslizas.forEach((el) => el.removeEventListener("click", handleDeslizaClick));
+    };
+  }, []);
+
   useEffect(() => {
     document.title = "Cibercuritas - Nosotros";
   }, []);
