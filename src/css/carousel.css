@@ -122,12 +122,12 @@
 @media (max-width: 1200px) {
   .carousel-item h3 {
     font-size: 48px;
-    top: -250px;
+    top: -190px;
   }
 
   .carousel-item p {
     font-size: 24px;
-    top: -240px;
+    top: -180px;
   }
 
   .carousel-item img {
@@ -138,12 +138,12 @@
 @media (max-width: 900px) {
   .carousel-item h3 {
     font-size: 36px;
-    top: -200px;
+    top: -150px;
   }
 
   .carousel-item p {
     font-size: 20px;
-    top: -190px;
+    top: -140px;
   }
 
   .carousel-item img {
@@ -166,12 +166,12 @@
 @media (max-width: 768px) {
   .carousel-item h3 {
       font-size: 30px;
-      top: -290px;
+      top: -180px;
   }
 
   .carousel-item p {
       font-size: 18px;
-      top: -280px;
+      top: -170px;
   }
 
   .carousel-control-prev {
@@ -186,13 +186,13 @@
 @media (max-width: 600px) {
   .carousel-item h3 {
     font-size: 26px;
-    top: -120px;
+    top: -250px;
     text-align: center;
   }
 
   .carousel-item p {
     font-size: 16px;
-    top: -110px;
+    top: -240px;
     text-align: center;
   }
 
@@ -210,14 +210,14 @@
 
   .carousel-control-prev,
   .carousel-control-next {
-    display: none; /* flechas ocultas en móvil */
+    display: none;
   }
 
   .carousel-indicators {
     display: flex !important;
     justify-content: center;
     position: absolute;
-    bottom: 5px;
+    bottom: -10px;
     left: 0;
     right: 0;
     z-index: 10;
