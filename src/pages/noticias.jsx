@@ -109,6 +109,7 @@ export default function Noticias() {
     e.target.src = `${import.meta.env.BASE_URL}errorimg-noticias.jpg`;
   }}
 />}
+
             <h3>{n.title}</h3>
             <p>{n.description}</p>
             <a href={n.url} target="_blank" rel="noopener noreferrer">
