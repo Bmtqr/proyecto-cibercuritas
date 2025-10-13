@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build:gh": "cross-env GITHUB_PAGES=true vite build"
+
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
