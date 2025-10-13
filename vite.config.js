@@ -15,4 +15,8 @@ export default defineConfig({
   ],
     base: isGitHubPages ? '/proyecto-cibercuritas/' : './',
 
+    build: {
+    outDir: 'docs',
+  },
+
 })
