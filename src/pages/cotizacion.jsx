@@ -30,6 +30,16 @@ export default function Cotizacion() {
 
   const [errores, setErrores] = useState({});
   const [mensajeExito, setMensajeExito] = useState("");
+  const [precioTotal, setPrecioTotal] = useState(0);
+
+  const preciosServicios = {
+    conectividad: 1000000,
+    ciber: 2500000,
+    phishing: 700000,
+    soluTI: 1500000,
+    cloud: 2000000,
+  };
+
 
   // --- Manejadores de cambio ---
   const handleChange = (e) => {
@@ -38,6 +48,10 @@ export default function Cotizacion() {
 
     if (name === "rut") nuevoValor = formatearRut(value.replace(/[^0-9.\-kK]/g, ""));
     if (name === "telefono") nuevoValor = value.replace(/[^0-9]/g, "");
+
+    if (name === "area") {
+      setPrecioTotal(preciosServicios[value] || 0);
+    }
 
     setFormData({ ...formData, [name]: nuevoValor });
   };
@@ -80,6 +94,8 @@ export default function Cotizacion() {
       region: "",
       comentarios: "",
     });
+    setPrecioTotal(0); 
+
   };
 
   return (
@@ -102,12 +118,13 @@ export default function Cotizacion() {
             onChange={handleChange}
           >
             <option value="" disabled>Selecciona</option>
-            <option value="conec">Conectividad - 1.000.000 CLP</option>
+            <option value="conectividad">Conectividad - 1.000.000 CLP</option>
             <option value="ciber">Hacking Ético - 2.500.000 CLP</option>
             <option value="phishing">Phishing - 700.000 CLP</option>
-            <option value="soluc">Soluciones TI - 1.500.000 CLP</option>
+            <option value="soluTI">Soluciones TI - 1.500.000 CLP</option>
             <option value="cloud">Cloud - 2.000.000 CLP</option>
           </select>
+
 
           <label htmlFor="nombre">Nombre*</label>
           <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} required />
@@ -206,9 +223,15 @@ export default function Cotizacion() {
           {mensajeExito && <div className="mensaje-exito">{mensajeExito}</div>}
         </form>
 
+         <section className="precio-total">
+        <h3>Estimacion inicial (Referencial): </h3>
+        <p className="monto-total">
+          {precioTotal > 0
+            ? `${precioTotal.toLocaleString("es-CL")} CLP`
+            : "Selecciona un servicio para ver el total"}
+        </p>
+        <small className="small-cot">*Monto estimado según tipo de servicio seleccionado.</small>
       </section>
-      <section className="precio-total">
-        <h3>Precio Total Estimado: </h3>
       </section>
     <Footer />
     </>

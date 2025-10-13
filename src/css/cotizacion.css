@@ -296,9 +296,32 @@
   background-color: #ffeaea;
 }
 
-.precio-total{
+.precio-total {
+  margin-top: 30px;
   text-align: center;
-  color: white;
+  background: #222;
+  padding: 15px;
+  color: #fff;
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+
+.precio-total h3 {
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.monto-total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.small-cot {
+  color: #ccc;
+  display: block;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 680px) {
