@@ -79,7 +79,7 @@ export default function Nosotros() {
       </section>
 
 
-      <section className="imagen-texto1">
+      <section className="imagen-texto1" data-aos="fade-up" data-aos-delay="100">
         <img
           src={`${import.meta.env.BASE_URL}/img/mihistoria.jpg`}
           className="itexto1"
@@ -127,7 +127,7 @@ export default function Nosotros() {
           <h4 className="texto-info3">
             <strong>Más que solo innovación tecnológica</strong>
             </h4>
-          <p className="parrafo-info3">
+          <p className="parrafo-info3" data-aos="fade-up" data-aos-delay="100">
             Creemos que la ciberseguridad va más allá de la tecnología: es un compromiso con un mundo digital más seguro, ético y sostenible.
             Por eso, además de innovar en soluciones de protección y redes inteligentes, trabajamos para reducir el impacto ambiental de nuestras operaciones, impulsar la formación de nuevos talentos en ciberseguridad y fomentar la colaboración entre empresas, instituciones y comunidades.
             <br></br><br></br>Nuestra misión es proteger el presente mientras construimos un futuro digital más confiable, inclusivo y resiliente para todos.
@@ -137,7 +137,7 @@ export default function Nosotros() {
           <h4 className="texto-info4">
             <strong>Liderazgo de la industria y crecimiento estable</strong>
           </h4>
-          <p className="parrafo-info4">
+          <p className="parrafo-info4" data-aos="fade-up" data-aos-delay="100">
             Cibercuritas está liderada por un equipo de especialistas con amplia experiencia
             en seguridad informática, gestión de riesgos y transformación digital.
             Nuestra dirección combina una visión estratégica con un profundo compromiso por fortalecer
