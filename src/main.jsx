@@ -10,7 +10,7 @@ import Scroll from './utils/scroll.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <BrowserRouter basename="/proyecto-cibercuritas">
+  <BrowserRouter basename={import.meta.env.BASE_URL}>
     <Scroll />
     <App />
   </BrowserRouter>

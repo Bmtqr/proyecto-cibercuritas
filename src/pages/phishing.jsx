@@ -100,7 +100,7 @@ export default function Phishing() {
 
         <section className="img-texto1-ph" data-aos="fade-up" data-aos-delay="100">
         <img
-          src={`${import.meta.env.BASE_URL}/img/phishing-texto1.webp`}
+          src={`${import.meta.env.BASE_URL}img/phishing-texto1.webp`}
           className="itexto1-ph"
           alt="Imagen texto 1"
           data-aos="fade-up" data-aos-delay="100"

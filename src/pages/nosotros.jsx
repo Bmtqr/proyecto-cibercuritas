@@ -81,7 +81,7 @@ export default function Nosotros() {
 
       <section className="imagen-texto1" data-aos="fade-up" data-aos-delay="100">
         <img
-          src={`${import.meta.env.BASE_URL}/img/mihistoria.jpg`}
+          src={`${import.meta.env.BASE_URL}img/mihistoria.jpg`}
           className="itexto1"
           alt="Imagen texto 1"
           data-aos="fade-up" data-aos-delay="100"

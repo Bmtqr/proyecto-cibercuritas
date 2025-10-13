@@ -26,11 +26,11 @@ export default function Home() {
     }
   };
 
-  const deslizas = document.querySelectorAll(".desliza");
-  deslizas.forEach((el) => el.addEventListener("click", handleDeslizaClick));
+  const desliza = document.querySelectorAll(".desliza");
+  desliza.forEach((el) => el.addEventListener("click", handleDeslizaClick));
 
   return () => {
-    deslizas.forEach((el) => el.removeEventListener("click", handleDeslizaClick));
+    desliza.forEach((el) => el.removeEventListener("click", handleDeslizaClick));
     };
   }, []);
 
@@ -44,7 +44,7 @@ export default function Home() {
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                src={`${import.meta.env.BASE_URL}/img/carousel-1.jpg`}
+                src={`${import.meta.env.BASE_URL}img/carousel-1.jpg`}
                 alt="Slide 1"
                 />
                 <Carousel.Caption>
@@ -60,7 +60,7 @@ export default function Home() {
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                src={`${import.meta.env.BASE_URL}/img/carousel-2.jpg`}
+                src={`${import.meta.env.BASE_URL}img/carousel-2.jpg`}
                 alt="Slide 2"
                 />
                 <Carousel.Caption>
@@ -76,7 +76,7 @@ export default function Home() {
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                src={`${import.meta.env.BASE_URL}/img/carousel-3.png`}
+                src={`${import.meta.env.BASE_URL}img/carousel-3.png`}
                 alt="Slide 3"
                 />
                 <Carousel.Caption>
@@ -152,7 +152,7 @@ export default function Home() {
         </section>
         <section className="imagen-texto1" data-aos="fade-up" data-aos-delay="100">
             <img
-                src={`${import.meta.env.BASE_URL}/img/texto1.jpg`}
+                src={`${import.meta.env.BASE_URL}img/texto1.jpg`}
                 className="itexto1"
                 alt="Imagen texto 1"
                 data-aos="fade-up" data-aos-delay="100"
