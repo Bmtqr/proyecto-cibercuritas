@@ -10,6 +10,6 @@ export default defineConfig({
       },
     }),
   ],
-    base: '/proyecto-cibercuritas',
+    base: '/proyecto-cibercuritas/',
 
 })

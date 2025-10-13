@@ -11,6 +11,7 @@ import "aos/dist/aos.css";
 import Navbar from "../utils/navbar.jsx";
 import Noticias from "./noticias.jsx";
 import "../css/home.css"
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
     useEffect(() => {
@@ -168,9 +169,9 @@ export default function Home() {
                     A través de estrategias integrales de prevención, detección y respuesta, ayudamos a proteger tus activos, mantener la continuidad operativa y garantizar la confianza digital de tus clientes.
                 </p>
 
-                <a href="#" className="btn-cta" data-aos="fade-up" data-aos-delay="100">
-                Descubre más
-                </a>
+                <NavLink to="/cotizacion" className="btn-cta" data-aos="fade-up" data-aos-delay="100">
+                    Descubre más
+                </NavLink>
             </div>
         </section>
     <Noticias />

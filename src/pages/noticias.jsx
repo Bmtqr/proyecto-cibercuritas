@@ -47,7 +47,7 @@ export default function Noticias() {
   }, []);
 
   if (cargando) return <p className="cargando-not">Cargando noticias...</p>;
-  if (error) return <p className="error-not">Error: {error}</p>;
+  if (error) return <p className="error-not">Error al cargar noticia (reinicia la pagina)</p>;
 
     const slidesToShow = isMobile ? 1 : 4;
 
@@ -101,7 +101,14 @@ export default function Noticias() {
       <Slider ref={sliderRef} {...settings}>
         {noticias.map((n, i) => (
           <div key={i} className="noticia-card">
-            {n.urlToImage && <img src={n.urlToImage} alt={n.title || "Noticia"} />}
+            {<img
+  src={n.urlToImage || `${import.meta.env.BASE_URL}errorimg-noticias.jpg`}
+  alt={n.title || "Noticia de ciberseguridad"}
+  onError={(e) => {
+    e.target.onerror = null; // evita bucles infinitos
+    e.target.src = `${import.meta.env.BASE_URL}errorimg-noticias.jpg`;
+  }}
+/>}
             <h3>{n.title}</h3>
             <p>{n.description}</p>
             <a href={n.url} target="_blank" rel="noopener noreferrer">

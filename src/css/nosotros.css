@@ -170,16 +170,16 @@
 .vms .card {
   background-color: rgb(39, 39, 39);
   padding: 20px;
-  border-radius: var(--border-radius-s);
+  border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
   margin-bottom: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
 
 .vms .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+  box-shadow: 0 16px 35px rgba(123, 123, 123, 0.7);
 }
 
 .vms .card h3 {
@@ -236,7 +236,7 @@
   bottom: -8px;
   width: 60px;
   height: 3px;
-  background: #0077b5;
+  background: #a3a3a3;
 }
 
 .texto-contenido p {
@@ -245,19 +245,97 @@
   color: #ffffff;
 }
 
-.btn-cta {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: #004b74;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: background 0.3s ease, transform 0.2s ease;
+.separador-nosotros {
+  margin-bottom: 40px;
+  height: 60px;
+  background: rgb(46, 46, 46);
 }
-.btn-cta:hover {
-  background: #002a3e;
-  transform: translateY(-2px);
+
+.texto-info2 {
+  position: relative;
+  font-size: 28px;
+  padding: 40px 0;
+  text-align: left;
+  margin-left: 100px;
+  color: white;
+}
+
+.texto-info2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  width: 90px;
+  height: 5px;
+  background: #a3a3a3;
+}
+
+.parrafo-info2 {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: left;
+  margin-left: 100px;
+  max-width: 89%;
+  margin-bottom: 60px;
+}
+
+.texto-info3 {
+  position: relative;
+  font-size: 28px;
+  padding: 40px 0;
+  text-align: left;
+  margin-left: 100px;
+  color: white;
+}
+
+.texto-info3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  width: 90px;
+  height: 5px;
+  background: #a3a3a3;
+}
+
+.parrafo-info3 {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: left;
+  margin-left: 100px;
+  max-width: 89%;
+  margin-bottom: 60px;
+}
+
+.texto-info4 {
+  position: relative;
+  font-size: 28px;
+  padding: 40px 0;
+  text-align: left;
+  margin-left: 100px;
+  color: white;
+}
+
+.texto-info4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  width: 90px;
+  height: 5px;
+  background: #a3a3a3;
+}
+
+.parrafo-info4 {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: left;
+  margin-left: 100px;
+  max-width: 89%;
+  margin-bottom:80px;
 }
 
 @media (max-width: 768px) {

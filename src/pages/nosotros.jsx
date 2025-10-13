@@ -106,11 +106,49 @@ export default function Nosotros() {
             no una fuente de riesgo. Porque para nosotros, la seguridad no es un producto,
             es una cultura.
           </p>
-          <a href="#" className="btn-cta" data-aos="fade-up" data-aos-delay="100">
-            Descubre más
-          </a>
         </div>
       </section>
+      <section className="separador-nosotros" data-aos="fade-up" data-aos-delay="100">
+        </section>
+      <section className="nosotros-info2" data-aos="fade-up" data-aos-delay="100">
+          <h4 className="texto-info2">
+            <strong>Innovación y excelencia en ciberseguridad</strong>
+          </h4>
+          <p className="parrafo-info2">
+            En Cibercuritas, combinamos innovación tecnológica y experiencia humana
+            para ofrecer soluciones de ciberseguridad que protegen lo más valioso de tu organización:
+            su información, su reputación y su futuro digital.
+            Nuestro enfoque integral nos permite anticipar amenazas, fortalecer infraestructuras críticas
+            y garantizar la continuidad de tus operaciones en un entorno
+            cada vez más conectadoy desafiante.
+            </p>
+        </section>
+        <section className="nosotros-info3" data-aos="fade-up" data-aos-delay="100">
+          <h4 className="texto-info3">
+            <strong>Más que solo innovación tecnológica</strong>
+            </h4>
+          <p className="parrafo-info3">
+            Creemos que la ciberseguridad va más allá de la tecnología: es un compromiso con un mundo digital más seguro, ético y sostenible.
+            Por eso, además de innovar en soluciones de protección y redes inteligentes, trabajamos para reducir el impacto ambiental de nuestras operaciones, impulsar la formación de nuevos talentos en ciberseguridad y fomentar la colaboración entre empresas, instituciones y comunidades.
+            <br></br><br></br>Nuestra misión es proteger el presente mientras construimos un futuro digital más confiable, inclusivo y resiliente para todos.
+            </p>
+        </section>
+        <section className="nosotros-info4" data-aos="fade-up" data-aos-delay="100">
+          <h4 className="texto-info4">
+            <strong>Liderazgo de la industria y crecimiento estable</strong>
+          </h4>
+          <p className="parrafo-info4">
+            Cibercuritas está liderada por un equipo de especialistas con amplia experiencia
+            en seguridad informática, gestión de riesgos y transformación digital.
+            Nuestra dirección combina una visión estratégica con un profundo compromiso por fortalecer
+            la ciberresiliencia de las organizaciones en América Latina y el mundo.
+            <br></br><br></br>Contamos con un consejo asesor multidisciplinario que aporta perspectiva global
+            y orientación técnica frente a los desafíos más críticos de la ciberseguridad actual.
+            Gracias a esta estructura, Cibercuritas consolida su posición como referente en innovación,
+            confianza y excelencia operativa dentro del sector tecnológico.
+          </p>
+          </section>
+            
       <Footer />
     </main>
   );
