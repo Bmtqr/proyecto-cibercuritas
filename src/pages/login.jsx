@@ -1,13 +1,21 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/login.css";
 import { validarCorreo, cifrarPassword } from "../utils/cifrado.jsx";
 
 
 export default function Login() {
+  const navigate = useNavigate();
+
   useEffect(() => {
       document.title = "Cibercuritas - Login";
     }, []);
+
+  const USUARIO_VALIDO = {
+  email: "admin@cibercuritas.org",
+  password: "cibercuritas2025"
+  };
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);  //ver - ocultar
@@ -20,15 +28,21 @@ export default function Login() {
       return;
     }
 
-    const hashedPass = cifrarPassword(password);
-    console.log("Hash generado:", hashedPass);
+    //const hashedPass = cifrarPassword(password);
+    //console.log("Hash generado:", hashedPass);
 
-    alert(`Correo: ${email}\nHash: ${hashedPass}`);
+    //alert(`Correo: ${email}\nHash: ${hashedPass}`);
 
-    if (ok) {
-      navigate('/')
+
+  if (email === USUARIO_VALIDO.email && password === USUARIO_VALIDO.password) {
+    alert("Acceso concedido. Bienvenido a Cibercuritas.");
+    navigate('/');
+  } else {
+    alert("Credenciales incorrectas. Reintente.");
     }
   }
+
+
 
   return (
     <main className="main-login">
@@ -75,8 +89,8 @@ export default function Login() {
             </div>
 
             <div className="links">
-              <a href="#">¿Olvidaste tu correo?</a>
-              <a href="#">¿Olvidaste tu contraseña?</a>
+              <a>¿Olvidaste tu correo?</a>
+              <a>¿Olvidaste tu contraseña?</a>
             </div>
 
             <div className="actions">
@@ -90,7 +104,7 @@ export default function Login() {
           </form>
         </div>
       </div>
-          <section class="copy">
+          <section className="copy">
       <p>Copyright © 2025 Cibercuritas, Inc. Todos los derechos reservados.</p>
     </section>
     </div>

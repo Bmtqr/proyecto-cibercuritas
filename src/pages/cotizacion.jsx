@@ -40,14 +40,21 @@ export default function Cotizacion() {
     cloud: 2000000,
   };
 
-
-  // --- Manejadores de cambio ---
   const handleChange = (e) => {
     const { name, value } = e.target;
     let nuevoValor = value;
 
     if (name === "rut") nuevoValor = formatearRut(value.replace(/[^0-9.\-kK]/g, ""));
-    if (name === "telefono") nuevoValor = value.replace(/[^0-9]/g, "");
+    if (name === "telefono") {
+      let digits = value.replace(/[^0-9]/g, "");
+
+      if (!digits.startsWith("9")) {
+        digits = "9" + digits.replace(/^9+/, "");
+      }
+
+      digits = digits.slice(0, 9);
+      nuevoValor = digits;
+    }
 
     if (name === "area") {
       setPrecioTotal(preciosServicios[value] || 0);
@@ -177,7 +184,11 @@ export default function Cotizacion() {
               className={errores.telefono ? "input-error" : ""}
               value={formData.telefono}
               onChange={handleChange}
-              placeholder="Ej: 912345678"
+              onFocus={() => {
+                if (formData.telefono === "") setFormData({ ...formData, telefono: "9" });
+              }
+            }
+              placeholder="Ej: 9XXXXXXXX"
               maxLength="9"
               required
             />
