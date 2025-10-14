@@ -25,6 +25,7 @@ export default function Cotizacion() {
     empresa: "",
     telefono: "",
     region: "",
+    monto: "",
     comentarios: "",
   });
 
@@ -56,6 +57,20 @@ export default function Cotizacion() {
       nuevoValor = digits;
     }
 
+    if (name === "monto") {
+    let soloNumeros = value.replace(/\D/g, "");
+
+    if (soloNumeros.length > 7) {
+        soloNumeros = soloNumeros.slice(0, 7);
+      }
+
+    let numero = parseInt(soloNumeros || "0", 10);
+    if (numero > 5000000) numero = 5000000;
+
+    const formateado = new Intl.NumberFormat("es-CL").format(numero);
+    nuevoValor = formateado;
+  }
+
     if (name === "area") {
       setPrecioTotal(preciosServicios[value] || 0);
     }
@@ -66,7 +81,11 @@ export default function Cotizacion() {
   // --- Envío del formulario ---
   const handleSubmit = (e) => {
     e.preventDefault();
+    //const montoLimpio = formData.monto.replace(/\./g, ""); //En caso de necesitar realizar un calculo con el monto usar esto
     const nuevosErrores = {};
+    const montoLimpio = formData.monto.replace(/\./g, "");
+    const montoIngresado = parseInt(montoLimpio, 10);
+    const precioServicio = preciosServicios[formData.area] || 0;
 
     if (!formData.area) nuevosErrores.area = "Este campo es obligatorio";
     if (!formData.nombre) nuevosErrores.nombre = "Este campo es obligatorio";
@@ -82,6 +101,16 @@ export default function Cotizacion() {
     if (!validarTelefono(formData.telefono)) nuevosErrores.telefono = "Debe tener 9 números";
     if (!validarDV(formData.rut)) nuevosErrores.rut = "RUT inválido";
     else if (rutBloqueado(formData.rut)) nuevosErrores.rut = "RUT no permitido";
+
+
+    if (precioServicio > 0) {
+      const minimo = precioServicio - 100000;
+      const maximo = precioServicio + 100000;
+
+    if (montoIngresado < minimo || montoIngresado > maximo) {
+      nuevosErrores.monto = `Error.`;
+    }
+}
 
     setErrores(nuevosErrores);
     if (Object.keys(nuevosErrores).length > 0) return;
@@ -99,6 +128,7 @@ export default function Cotizacion() {
       empresa: "",
       telefono: "",
       region: "",
+      monto: "",
       comentarios: "",
     });
     setPrecioTotal(0); 
@@ -148,7 +178,7 @@ export default function Cotizacion() {
               className={errores.rut ? "input-error" : ""}
               value={formData.rut}
               onChange={handleChange}
-              placeholder="11.111.111-1"
+              placeholder="XX.XXX.XXX-X"
               maxLength="12"
               required
             />
@@ -220,6 +250,12 @@ export default function Cotizacion() {
             <option>Aysén</option>
             <option>Magallanes</option>
           </select>
+
+          {/* MONTO */}
+            <label htmlFor="monto">Monto*</label>
+            <input id="monto" type="text" name="monto" value={formData.monto} onChange={handleChange} placeholder="Ej: XXX.XXX" inputMode="numeric" required 
+            className={errores.monto ? "input-error-m error-inside-m" : ""} />
+
 
           <label htmlFor="comentarios">Comentarios</label>
           <textarea
