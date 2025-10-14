@@ -34,10 +34,10 @@ export default function Login() {
     //alert(`Correo: ${email}\nHash: ${hashedPass}`);
 
 
-  if (email === USUARIO_VALIDO.email && password === USUARIO_VALIDO.password) {
+    if (email === USUARIO_VALIDO.email && password === USUARIO_VALIDO.password) {
     alert("Acceso concedido. Bienvenido a Cibercuritas.");
     navigate('/');
-  } else {
+    } else {
     alert("Credenciales incorrectas. Reintente.");
     }
   }
