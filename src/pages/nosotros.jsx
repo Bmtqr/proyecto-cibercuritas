@@ -110,6 +110,7 @@ export default function Nosotros() {
       </section>
       <section className="separador-nosotros" data-aos="fade-up" data-aos-delay="100">
         </section>
+        
       <section className="nosotros-info2" data-aos="fade-up" data-aos-delay="100">
           <h4 className="texto-info2">
             <strong>Innovación y excelencia en ciberseguridad</strong>

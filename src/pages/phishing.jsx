@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import AOS from 'aos';
 import "../css/phishing.css";
 import Footer from '../utils/footer.jsx';
+import CountUp from 'react-countup';
 
 export default function Phishing() {
     useEffect(() => {
@@ -53,7 +54,7 @@ export default function Phishing() {
 
 
       <section className="stats-ph">
-        <div className="stat-ph" data-aos="fade-up" data-aos-delay="100">
+        <div className="stat-ph" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-in-out">
           <h2>+150</h2>
           <p>
             IMPLEMENTACIONES
@@ -62,7 +63,7 @@ export default function Phishing() {
           </p>
         </div>
 
-        <div className="stat-ph" data-aos="fade-up" data-aos-delay="100">
+        <div className="stat-ph" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out">
           <h2>+60</h2>
           <p>
             ESPECIALIZACIÓN EN
@@ -71,7 +72,7 @@ export default function Phishing() {
           </p>
         </div>
 
-        <div className="stat-ph" data-aos="fade-up" data-aos-delay="100">
+        <div className="stat-ph" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-easing="ease-in-out">
           <h2>+45</h2>
           <p>
             USUARIOS CERTIFICADOS
