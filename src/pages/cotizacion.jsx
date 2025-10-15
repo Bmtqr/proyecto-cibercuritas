@@ -45,6 +45,10 @@ export default function Cotizacion() {
     const { name, value } = e.target;
     let nuevoValor = value;
 
+    if (["nombre", "apellido", "empresa", "cargo"].includes(name)) {
+    nuevoValor = value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, ""); 
+  }
+
     if (name === "rut") nuevoValor = formatearRut(value.replace(/[^0-9.\-kK]/g, ""));
     if (name === "telefono") {
       let digits = value.replace(/[^0-9]/g, "");

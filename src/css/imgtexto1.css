@@ -23,7 +23,7 @@
   display: inline-block;
   margin-top: 20px;
   padding: 12px 24px;
-  background: #004a72;
+  background: #032a3f;
   color: #fff;
   font-weight: 600;
   border-radius: 8px;
@@ -31,7 +31,7 @@
   text-decoration: none;
 }
 .btn-cta:hover {
-  background: #005f8a;
+  background: #011a25;
   transform: translateY(-2px);
 }
 
