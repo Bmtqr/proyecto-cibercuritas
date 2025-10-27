@@ -1,4 +1,4 @@
-// --- RUT ---
+
 export const limpiarRut = (rut) => rut.replace(/[.\s-]/g, "").toUpperCase();
 
 export const calcularDV = (cuerpo) => {
@@ -37,8 +37,6 @@ export const formatearRut = (rutCompleto) => {
   return `${cuerpoForm}-${dv}`;
 };
 
-// --- EMAIL ---
 export const validarEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-// --- TELÉFONO ---
 export const validarTelefono = (tel) => /^\d{9}$/.test(tel);
