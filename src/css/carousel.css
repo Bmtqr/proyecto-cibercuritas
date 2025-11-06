@@ -1,0 +1,240 @@
+
+:root {
+    /* Colores */
+    --primary-color: #2b2b2b;
+    --secondary-color: #7a8087;
+    --black-color: #000000;
+    --white-color: #fff;
+    --gray-dark-color: #3b3b3b;
+
+    /* Tamaño de fuente */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1.2rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* Grosor fuente */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /*  Radio bordes */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Ancho maximo del sitio */
+    --site-max-width: auto;
+}
+
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover; 
+}
+
+.carousel-indicators {
+  display: none !important;
+}
+
+.carousel-item h3 {
+    color: var(--white-color);
+    font-size: 60px;
+    font-weight: var(--font-weight-bold);
+    text-shadow: #000000 1px 1px 2px;
+    top: -300px;
+    position: relative;
+}
+
+.carousel-item p {
+    color: var(--white-color);
+    font-size: 30px;
+    font-weight: var(--font-weight-medium);
+    text-shadow: #000000 1px 1px 2px;
+    position: relative;
+    top: -290px;
+}
+
+.desliza {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;     
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  font-weight: 600;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.desliza h5 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+.desliza .fa-chevron-down {
+  font-size: 22px;
+  line-height: 1;
+  display: inline-block;
+  margin-left: 4px;
+  animation: bounce 1.6s infinite;
+  opacity: 0.95;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0);   opacity: 0.9; }
+  40%  { transform: translateY(-10px); opacity: 1; }
+  70%  { transform: translateY(-4px);  opacity: 0.95; }
+  100% { transform: translateY(0);   opacity: 0.9; }
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: auto;     
+  top: 50%;      
+  transform: translateY(-50%);
+  opacity: 0.3; 
+}
+
+.carousel-control-prev {
+  left: 40px;    
+}
+
+.carousel-control-next {
+  right: 40px;   
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1; 
+}
+
+@media (max-width: 1200px) {
+  .carousel-item h3 {
+    font-size: 48px;
+    top: -190px;
+  }
+
+  .carousel-item p {
+    font-size: 24px;
+    top: -180px;
+  }
+
+  .carousel-item img {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .carousel-item h3 {
+    font-size: 36px;
+    top: -150px;
+  }
+
+  .carousel-item p {
+    font-size: 20px;
+    top: -140px;
+  }
+
+  .carousel-item img {
+    height: 80vh;
+  }
+
+  .carousel-control-prev {
+    left: 20px;
+  }
+
+  .carousel-control-next {
+    right: 20px;
+  }
+
+  .desliza h5 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item h3 {
+      font-size: 30px;
+      top: -180px;
+  }
+
+  .carousel-item p {
+      font-size: 18px;
+      top: -170px;
+  }
+
+  .carousel-control-prev {
+    left: 10px;    
+  }
+
+  .carousel-control-next {
+    right: 10px;   
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-item h3 {
+    font-size: 26px;
+    top: -250px;
+    text-align: center;
+  }
+
+  .carousel-item p {
+    font-size: 16px;
+    top: -240px;
+    text-align: center;
+  }
+
+  .carousel-item img {
+    height: 100vh;
+  }
+
+  .desliza {
+    bottom: 18px;
+  }
+
+  .desliza h5 {
+    font-size: 12px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
+  .carousel-indicators {
+    display: flex !important;
+    justify-content: center;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.6;
+    margin: 0 5px;
+    transition: opacity 0.3s;
+  }
+
+  .carousel-indicators .active {
+    opacity: 1;
+    background-color: #303030;
+  }
+}

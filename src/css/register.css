@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #2b2b2b;
+  --secondary-color: #7a8087;
+  --line: #3b3b3b;
+  --white: #fff;
+}
+
+.main-register {
+  background-image: url('/img/login-background.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+}
+
+.cuadro-register {
+  width: 100%;
+  max-width: 900px;
+  background: rgb(37, 37, 37);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  color: var(--white);
+  padding: 30px 40px;
+}
+
+.cuadro-body-register h2 {
+  margin: 0 0 20px;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.title-underline-register {
+  display: inline-block;
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--secondary-color);
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* === GRID STRUCTURE === */
+.register-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 40px;
+}
+
+.field-register {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-register label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.field-register input {
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--white);
+  color: var(--white);
+  padding: 8px 0;
+  outline: none;
+  transition: 0.3s;
+}
+
+.field-register input:focus {
+  border-bottom-color: var(--secondary-color);
+}
+
+.field-register small {
+  color: #ff4c4c;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.contraseña-register {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.contraseña-register label {
+  align-self: flex-start; /* <-- asegura que el label siempre quede arriba */
+  margin-bottom: 5px;
+}
+
+.toggle-contraseña-register {
+  position: absolute;
+  right: 10px;
+  top: 60%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+.icon-ojo {
+  color: white;
+}
+
+.icon-ojo:hover {
+  color: #9a9a9a;
+}
+
+.actions-register {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.boton-register {
+  border-radius: 4px;
+  padding: 12px 25px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boton-login-register {
+  background: gray;
+  border: 1px solid var(--secondary-color);
+  color: var(--white);
+}
+
+.boton-login-register:hover {
+  filter: brightness(0.85);
+}
+
+.boton-crear-register {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.boton-crear-register:hover {
+  background: #3b3b3b;
+}
+
+.mensaje-exito-register {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #4caf50;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.copy-register {
+  text-align: center;
+  margin-top: 40px;
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

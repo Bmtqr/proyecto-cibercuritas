@@ -1,0 +1,16 @@
+.titulo1 {
+  font-size: var(--font-size-m);
+  text-align: center;
+  color: rgb(255, 60, 60);
+  margin-top: 60px; 
+  padding: 0;
+  letter-spacing: 2px;
+} 
+
+.titulo-h1 {
+  font-style: "Poppins", sans-serif;
+  padding-top: 10px;
+  text-align: center;
+  margin: 20px;
+  color: white;
+}
