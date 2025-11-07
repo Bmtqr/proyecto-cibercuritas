@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { validarCorreo } from "../utils/cifrado.jsx";
+import { apiFetch } from "../utils/api";
 import {
   validarDV,
   formatearRut,
@@ -9,8 +11,18 @@ import "../css/cotizacion.css";
 import Footer from "../utils/footer.jsx";
 import Navbar from "../utils/navbar.jsx";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Cotizacion() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Debes iniciar sesión para acceder al formulario.");
+      navigate("/login");
+    }
+  }, [navigate]);
+
   useEffect(() => {
       document.title = "Cibercuritas - Contacto";
     }, []);
@@ -82,7 +94,7 @@ export default function Cotizacion() {
   };
 
   // --- Envío del formulario ---
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     //const montoLimpio = formData.monto.replace(/\./g, ""); //En caso de necesitar realizar un calculo con el monto usar esto
     const nuevosErrores = {};
@@ -119,23 +131,49 @@ export default function Cotizacion() {
     if (Object.keys(nuevosErrores).length > 0) return;
 
 
-    setMensajeExito("Formulario enviado con éxito");
-    setTimeout(() => setMensajeExito(""), 4000);
-    setFormData({
-      area: "",
-      nombre: "",
-      apellido: "",
-      email: "",
-      rut: "",
-      cargo: "",
-      empresa: "",
-      telefono: "",
-      region: "",
-      monto: "",
-      comentarios: "",
-    });
-    setPrecioTotal(0); 
+   // === Envio al backend con security ese ===
+    const payload = {
+      area: formData.area,
+      name: formData.nombre,
+      lastname: formData.apellido,
+      rut: formData.rut,
+      mail: formData.email,
+      company: formData.empresa,
+      charge: formData.cargo,
+      phone: formData.telefono,
+      region: formData.region,
+      total: montoIngresado,
+      comment: formData.comentarios,
+    };
 
+    try {
+      const data = await apiFetch("http://localhost:18080/api/form", {
+        method: "POST",
+        body: JSON.stringify(payload),
+      });
+
+      console.log("Envío exitoso:", data);
+      setMensajeExito("Formulario enviado con éxito ✅");
+
+      setFormData({
+        area: "",
+        nombre: "",
+        apellido: "",
+        email: "",
+        rut: "",
+        cargo: "",
+        empresa: "",
+        telefono: "",
+        region: "",
+        monto: "",
+        comentarios: "",
+      });
+      setPrecioTotal(0);
+      setTimeout(() => setMensajeExito(""), 4000);
+    } catch (error) {
+      console.error("Error al enviar:", error);
+      alert("Error al enviar la cotización. Intenta nuevamente.");
+    }
   };
 
   return (

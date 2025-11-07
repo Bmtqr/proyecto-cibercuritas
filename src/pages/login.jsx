@@ -3,26 +3,24 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/login.css";
 import { validarCorreo, cifrarPassword } from "../utils/cifrado.jsx";
-import { BiMessage } from "react-icons/bi";
-import { Alert } from "react-bootstrap";
 
 
-export default function Login() {
-  const navigate = useNavigate();
+  export default function Login() {
+    const navigate = useNavigate();
 
-  useEffect(() => {
-      document.title = "Cibercuritas - Login";
-    }, []);
+    useEffect(() => {
+        document.title = "Cibercuritas - Login";
+      }, []);
 
-  const uadmin= {
-  email: "admin@cibercuritas.cl",
-  password: "1234567890987"
-  };
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);  //ver - ocultar
+    const uadmin= {
+    email: "admin@cibercuritas.cl",
+    password: "1234567890987"
+    };
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);  //ver - ocultar
 
-  function validarFormulario(e) {
+    async function validarFormulario(e) {
     e.preventDefault();
 
     if (!validarCorreo(email)) {
@@ -30,30 +28,41 @@ export default function Login() {
       return;
     }
 
-    //const hashedPass = cifrarPassword(password);
-    //console.log("Hash generado:", hashedPass);
+    try {
+      const response = await fetch("http://127.0.0.1:18080/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: email,
+          password: password,
+        }),
+      });
 
-    //alert(`Correo: ${email}\nHash: ${hashedPass}`);
+      if (!response.ok) {
+        if (response.status === 401) {
+          alert("Correo o contraseña incorrectos.");
+        } else {
+          alert(`Error en el servidor (${response.status})`);
+        }
+        return;
+      }
 
+      const data = await response.json();
+      console.log("Respuesta del backend:", data);
 
-    if (email === uadmin.email && password === uadmin.password) {
-      alert("Acceso concedido. Bienvenido a Cibercuritas.");
-      navigate('/admin');
-      return;
-    } 
-
-    //if (email.length >= 1 && password.length >= 8) {
-      //alert("Bienvenido usuario.");
-      //navigate("/");
-      //return;
-    //}
-     
-    
-    alert("Credenciales incorrectas. Reintente.");
-  
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("user", email);
+        alert("Inicio de sesión exitoso.");
+        navigate("/home");
+      } else {
+        alert("Respuesta inesperada del servidor.");
+      }
+    } catch (error) {
+      console.error("Error de conexión:", error);
+      alert("No se pudo conectar al servidor. Intenta nuevamente.");
+    }
   }
-
-
 
   return (
     <main className="main-login">

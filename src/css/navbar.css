@@ -186,6 +186,15 @@
   .nav-toggle:checked + .hamburger span:nth-child(1){ transform: translateY(9px) rotate(45deg); }
   .nav-toggle:checked + .hamburger span:nth-child(2){ opacity: 0; }
   .nav-toggle:checked + .hamburger span:nth-child(3){ transform: translateY(-9px) rotate(-45deg); }
+
+  .navbar .menu .user-info,
+  .navbar .menu .logout-btn {
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+  }
+  
 }
 
 .navbar .menu .has-submenu { position: relative; }
@@ -224,4 +233,34 @@
 @media (hover: none) {
   .navbar .menu .has-submenu:focus-within > .submenu { display: block; }
   .navbar .menu .has-submenu > .nav-link { pointer-events: auto; }
+}
+
+/* === ESTILO UNIFICADO PARA USUARIO Y LOGOUT === */
+.navbar .menu .user-info,
+.navbar .menu .logout-btn {
+  padding: 8px 14px;
+  color: var(--white-color);
+  font-size: var(--font-size-n);
+  border-radius: var(--border-radius-s);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Efecto hover igual al resto */
+.navbar .menu .user-info:hover,
+.navbar .menu .logout-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Alinear verticalmente el ícono con el texto */
+.navbar .menu .user-info i {
+  margin-right: 6px;
+}
+
+/* Quitar el subrayado o estilos por defecto en el span/botón */
+.logout-btn {
+  text-decoration: none;
 }

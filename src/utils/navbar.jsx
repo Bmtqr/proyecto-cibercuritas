@@ -1,10 +1,15 @@
 import "../css/navbar.css";
-import { NavLink, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 
 export default function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
+
   useEffect(() => {
     const navToggle = document.getElementById("nav-toggle");
     if (navToggle) navToggle.checked = false;
@@ -31,6 +36,27 @@ export default function Navbar() {
     document.removeEventListener("mousedown", handleClickOutside);
   };
 }, [location]);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const user = localStorage.getItem("user");
+
+    if (token) {
+      setIsLoggedIn(true);
+      setUserEmail(user || "");
+    } else {
+      setIsLoggedIn(false);
+      setUserEmail("");
+    }
+  }, [location]); // se actualiza al cambiar de ruta
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    alert("Sesión cerrada.");
+    setIsLoggedIn(false);
+    navigate("/login");
+  };
   
   return (
     <section className="section-navbar">
@@ -64,11 +90,30 @@ export default function Navbar() {
             <li className="menu-item">
               <NavLink to="/cotizacion" className="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>Contacto</NavLink>
             </li>
-            <li className="menu-item">
-              <NavLink to="/login" className="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>
-                <i className="fa-solid fa-user"></i>
-              </NavLink>
-            </li>
+            {/* 👇 Si NO está logueado, mostrar ícono de usuario */}
+            {!isLoggedIn && (
+              <li className="menu-item">
+                <NavLink to="/login" className="nav-link">
+                  <i className="fa-solid fa-user"></i>
+                </NavLink>
+              </li>
+            )}
+
+            {/* 👇 Si está logueado, mostrar correo + botón de logout */}
+            {isLoggedIn && (
+              <>
+                <li className="menu-item">
+                  <span className="nav-link user-info">
+                    <i className="fa-solid fa-user-check"></i> {userEmail}
+                  </span>
+                </li>
+                <li className="menu-item">
+                  <button className="nav-link logout-btn" onClick={handleLogout}>
+                    Cerrar sesión
+                  </button>
+                </li>
+              </>
+            )}
           </ul>
         </nav>
       </header>
